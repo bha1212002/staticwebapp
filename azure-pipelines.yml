@@ -12,6 +12,7 @@ steps:
   - script: |
       ls -lath
       pwd
+      cd react-app
       npm install
     displayName: 'npm install'
 
