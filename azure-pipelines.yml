@@ -1,7 +1,3 @@
-# Node.js
-# Build and deploy a React.js project with npm.
-# For more information, visit: https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
 trigger:
 - main
 
@@ -24,5 +20,3 @@ steps:
     artifactName: 'build'
     publishLocation: 'Container'
   displayName: 'Publish build artifacts'
-
-# Additional steps for code analysis, testing, deployment, etc. can be added here
