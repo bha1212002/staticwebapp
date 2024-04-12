@@ -13,6 +13,8 @@ steps:
     persistCredentials: true
 
   - script: |
+      ls -lath
+      pwd
       cd $(Build.SourcesDirectory)
       ls -la   # List the files in the directory for debugging
       npm install
