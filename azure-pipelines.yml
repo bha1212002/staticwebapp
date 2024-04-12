@@ -1,7 +1,8 @@
 trigger:
 - main
 
-pool: default
+pool:
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: NodeTool@0
@@ -13,10 +14,11 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+  workingDirectory: $(System.DefaultWorkingDirectory)home/einfochips/mypipe/_work/1/s
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.SourcesDirectory)/build'
+    pathtoPublish: '$(Build.SourcesDirectory)/home/einfochips/mypipe/_work/1/s'
     artifactName: 'build'
     publishLocation: 'Container'
   displayName: 'Publish build artifacts'
